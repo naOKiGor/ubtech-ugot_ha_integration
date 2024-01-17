@@ -1,0 +1,22 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "mjpeg_url": "MJPEG URL",
+                    "username": "Prisijungimos vardas"
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "mjpeg_url": "MJPEG URL",
+                    "username": "Prisijungimos vardas"
+                }
+            }
+        }
+    }
+}

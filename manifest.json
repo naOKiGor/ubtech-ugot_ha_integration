@@ -1,0 +1,11 @@
+{
+  "domain": "ubtech_ugot",
+  "name": "uGot - Powered by UBTECH",
+  "codeowners": ["@naOKiGor"],
+  "version": "v0.0.1-beta",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/ubtech_ugot",
+  "iot_class": "local_polling",
+  "dependencies": [],
+  "requirements": ["ugot==0.2.9"]
+}
