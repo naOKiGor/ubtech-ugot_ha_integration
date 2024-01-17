@@ -5,7 +5,7 @@ import asyncio
 from collections.abc import AsyncIterator
 from contextlib import suppress
 
-from ugot import ugot as ugot_sdk
+from ugot import ugot
 
 from homeassistant.components.camera import Camera
 from homeassistant.config_entries import ConfigEntry
