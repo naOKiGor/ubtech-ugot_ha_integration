@@ -4,8 +4,9 @@
   "codeowners": ["@naOKiGor"],
   "version": "v0.0.1-beta",
   "config_flow": true,
-  "documentation": "https://www.home-assistant.io/integrations/ubtech_ugot",
+  "documentation": "https://github.com/naOKiGor/ubtech-ugot_ha_integration",
   "iot_class": "local_polling",
   "dependencies": [],
-  "requirements": ["ugot==0.2.9"]
+  "requirements": ["ugot==0.2.9"],
+  "zeroconf": ["_uExplore_channel_server._tcp.local."]
 }

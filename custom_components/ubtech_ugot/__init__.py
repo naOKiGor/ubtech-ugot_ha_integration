@@ -6,26 +6,21 @@ from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.typing import ConfigType
 
 from .camera import uGotCamera
-from .const import CONF_UGOT_ADDRESS, DOMAIN, PLATFORMS
-from .util import filter_urllib3_logging
+from .const import CONF_UGOT_ADDRESS, DOMAIN, PLATFORMS, LOGGER
 
-__all__ = [
-    "CONF_UGOT_ADDRESS",
-    "uGotCamera",
-    "filter_urllib3_logging",
-]
 
 CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
-    """Set up the MJPEG IP Camera integration."""
-    filter_urllib3_logging()
+    """Set up the UBTECH uGot integration."""
+
     return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up from a config entry."""
+
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
     # Reload entry when its updated.
@@ -36,9 +31,11 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Unload a config entry."""
+
     return await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
 
 
 async def async_reload_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
     """Reload the config entry when it changed."""
+
     await hass.config_entries.async_reload(entry.entry_id)
